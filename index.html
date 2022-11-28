@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!----------------------------main css ------------------>
+    <link rel="stylesheet" href="css/style.css">
+    <!------------------------------@mediaqueries css----------->
+    <link rel="stylesheet" href="css/@media.css">
+    <!--------------------offline fonts----------------------->
+    <link rel="stylesheet" href="/fontawesome-free-6.2.0-web/css/all.css">
+    <!-------------------------online fonts ---------------------->
+    <script src="https://kit.fontawesome.com/a8ba985590.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!---------------------sidebar------------------------->
+    <div class="navbar" id="navbar">
+        <nav class="nav">
+            <div class="nav_logo">
+                <a href="home.html" class="nav_logo-text">TheGs</a>
+            </div>
+            <div class="nav_menu">
+                <ul id="nav_list" class="nav_list">
+                    <li class="nav_item">
+                        <a href="#home" class="nav_link active-link">Home</a>
+                    </li>
+                    <li  class="nav_item">
+                        <a href="#about" class="nav_link">About</a>
+                    </li>
+                    <li  class="nav_item">
+                        <a href="#work" class="nav_link">Projects</a>
+                    </li>
+                    <li  class="nav_item">
+                        <a href="#services" class="nav_link">Services</a>
+                    </li>
+                    <li  class="nav_item">
+                        <a href="#contact" class="nav_link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+             <!--menu and close icons-->
+            <div class="icn-cont">
+                <i id="open" class="fa fa-bars"></i>
+                <i id="close" class="fa fa-times"></i>
+            </div>
+        </nav>
+    </div>
+    <aside>
+        <div class="home_social">
+            <span class="home_social-follow">Follow Me</span>
+            <div class="home_social-links">
+                <a href="https://www.instagram.com/accounts/login/" target="blank" class="home_social-link">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/" target="blank" class="home_social-link">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/" target="blank" class="home_social-link">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <div onclick="openDntpop()" class="home_social-link donate">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="donate-details" id="dntPop">
+        <div class="close-btn" onclick="closeDntpop()">&times;</div>
+        <div class="donate-data">
+            <p>
+                <span class="plsd">
+                    Hi, I'm so much pleased to see you recognize my work and if you like it then you may wish to crown it. 
+                    My Bank Account Number is: <span class="bnkacct">1160179048768</span>
+                </span> <br><br>
+                I'm as well working 
+                on other projects still and soon some will be complete 
+                subscribe using the form bellow for updates.
+            </p>
+            <form action="" method="">
+                <input type="email" name="mail" id="customer-mail" placeholder="Enter your email">
+                <input type="text" name="name" id="customer-name" placeholder="Enter your name">
+                <div class="service-int">
+                    <h5>Select Service of interest</h5>
+                    <select name="service_s" id="">
+                        <option value="1">All</option>
+                        <option value="1">Wedsites</option>
+                        <option value="1">UI/UX Designs</option>
+                        <option value="1">Mobile Apps</option>
+                    </select>
+                </div>
+                <div class="update-confirmation">
+                    <input type="checkbox" name="upadte" id="uptade-conf" checked>
+                    <p>Update only on services of interest</p>
+                </div>
+                <button type="submit"> <a href="home.html">Subscribe</a> </button>
+            </form>
+        </div>
+    </div>
+    <!---------------------------main----------------------->
+    <main class="main">
+        <!--------------------home---------------------->
+        <section class="home" id="home">
+            <div class="home_container container grid">
+                <img src="images/vint-gidi.jpg" alt="" class="home_img">
+                <div class="home_data">
+                    <h1 class="home_tittle">Hi, I'm <span data-text="Gideon">Gideon</span></h1>
+                    <h3 class="home_subtittle">The Programmer</h3>
+                    <p class="home_descrption">I develope cool responsive websites, <br> with quality user experience and graphics. <br>I develope mobile applications as well <br> and some of my projects are listed bellow and links are provided through wich you can access them</p>
+                    <a href="#about" class="button">See About</a>
+                </div>
+            </div>  
+        </section>
+        <!--------------------About---------------------->
+        <section class="about section" id="about">
+            <h2 data-heading="My Intro" class="section_title">About Me</h2>
+            <div class="about_container container grid">
+                <div class="developer-profile">
+                    <h1>Developer</h1>
+                    <img src="./images/gidi.jpg" alt="">
+                    <div class="developer-details">
+                        <h4>Gideon Kirui</h4>
+                        <h4>Student - University of Embu</h4>
+                        <h4>Bsc Information Technology</h4>
+                        <h4>Interested in Programming</h4>
+                        <h4 class="last-strok">Kenyan</h4>
+                    </div>
+                </div>
+                <div class="about_data">
+                    <div class="desc-headers">
+                        <h2 data-heading="What To Know" class="about_nav active-about" onclick="openDescription()" >More About Me</h2>
+                        <h2 data-heading="My Learning" class="about_nav" onclick="openQualifications()">Education</h2>
+                        <h2 id="experience" data-heading="What I Know" class="about_nav" onclick="openSkills()">My Experience</h2>
+                    </div>
+                    <div class="desc-content">
+                        <div id="descript-did" class="description-details">
+                            <h3 class="about_heading">Hi, Here is more infomation about me</h3>
+                            <p class="about_description">
+                                I am an exiperienced Kenyan web developer offering Quality website with the best user
+                                interface and experirnce one of which is this portfolio. I have worked on quite a number of website projects and
+                                Mobile aplications. I almost do some designs on free time moreso on Photoshop related designs, I have a good
+                                understind of quite a number of programing languages and frameworks some of which are highlighted in "My Experience" section.
+                                In addition, I take Bachelors degeree in Information Technology.
+                                <br><br>
+                                Feel free to reach out to me anytime anywhere through the chanel(s) given bellow
+                            </p>
+                            <div class="about_info grid">
+                                <div class="about_box">
+                                    <i class="fa-solid fa-envelope about_icon"></i>
+                                    <h3 class="contact_card-title">Email</h3>
+                                    <span class="contact_card-data">thegs.dev.mail@gmail.com</span>
+                                    <span class="contact_button">
+                                        <a href="mailto:thegs.dev.mail@gmail.com">Write mail</a>
+                                    </span>
+                                </div>
+                                <div class="about_box">
+                                    <i class="fa-solid fa-message about_icon"></i>
+                                    <h3 class="contact_card-title">Whatsapp</h3>
+                                    <span class="contact_card-data">+254701872289</span>
+                                    <span class="contact_button">
+                                        <a href="https://wa.me/message/SDNZCGA22A4YL1">Text Me</a>
+                                    </span>
+                                </div>
+                                <div class="about_box">
+                                    <i class="fa-brands fa-twitter about_icon"></i>
+                                    <h3 class="contact_card-title">Twitter</h3>
+                                    <span class="contact_card-data">@GideonK68252014</span>
+                                    <span class="contact_button">
+                                        <a href="#">Follow on twitter</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="qualification_containerid" class="qualification_container container grid">
+                            <div class="education">
+                                <div class="first-mark"></div>
+                                <h3 class="qualification_tittle">
+                                    <i class="fa-solid fa-graduation-cap"></i> Education
+                                </h3>
+                                <div class="timeline">
+                                    <div class="timeline_item">
+                                        <div class="circle_dot"></div>
+                                        <h3 class="timeline_title">University of Embu - Kenya</h3>
+                                        <p class="timeline_text">Bachelors Degree in Information Technology</p>
+                                        <span class="timeline_date"><i class="fa-solid fa-calendar"></i>
+                                        2019 - Present</span>
+                                    </div>
+                                </div>
+                                <div class="timeline">
+                                    <div class="timeline_item">
+                                        <div class="circle_dot"></div>
+                                        <h3 class="timeline_title">Obera Boys' High School</h3>
+                                        <p class="timeline_text">Certificate of Secondary Education</p>
+                                        <span class="timeline_date"><i class="fa-solid fa-calendar"></i>
+                                        2015 - 2018</span>
+                                    </div>
+                                </div>
+                                <div class="timeline">
+                                    <div class="timeline_item">
+                                        <div class="circle_dot"></div>
+                                        <h3 class="timeline_title">Ragana Primary School</h3>
+                                        <p class="timeline_text">Certificate of Primary Education</p>
+                                        <span class="timeline_date"><i class="fa-solid fa-calendar"></i>
+                                        2005- 2014</span>
+                                    </div>
+                                </div>
+                                <div class="last-mark"></div>
+                            </div>
+                            <div class="experience">
+                                <div class="first-mark"></div>
+                                <h3 class="qualification_tittle">
+                                    <i class="fa-solid fa-suitcase"></i> Experience
+                                </h3>
+                                <div class="timeline">
+                                    <div class="timeline_item">
+                                        <div class="circle_dot"></div>
+                                        <h3 class="timeline_title">Egerton University</h3>
+                                        <p class="timeline_text">ICT Internship</p>
+                                        <span class="timeline_date"><i class="fa-solid fa-calendar"></i>
+                                        2021 - Present</span>
+                                    </div>
+                                </div>
+                                <div class="timeline">
+                                    <div class="timeline_item">
+                                        <div class="circle_dot"></div>
+                                        <h3 class="timeline_title">Elgon-View Collage</h3>
+                                        <p class="timeline_text">Computer Packages</p>
+                                        <span class="timeline_date"><i class="fa-solid fa-calendar"></i>
+                                        2018 - 2019</span>
+                                    </div>
+                                </div>
+                                <div class="timeline">
+                                    <div class="timeline_item">
+                                        <div class="circle_dot"></div>
+                                        <h3 class="timeline_title">Royals Cyber</h3>
+                                        <p class="timeline_text">Website/ Ux Desigs</p>
+                                        <span class="timeline_date"><i class="fa-solid fa-calendar"></i>
+                                        2016- 2018</span>
+                                    </div>
+                                </div>
+                                <div class="last-mark"></div>
+                            </div>
+                        </div>
+                        <div class="skills section" id="skill">
+                            <div class="skills_container grid">
+                                <div class="skills_tabs">
+                                    <div class="skills_header skills_active" data-target="#frontend">
+                                        <i class="fa-solid fa-code skills_icon"></i>
+                                        <div>
+                                            <h1 class="skills_title">Frontend Developer</h1>
+                                            <span class="skills_subtitle">More than 1 year</span>
+                                        </div>
+                                        <i class="fa-solid fa-angle-down skills_arrow"></i>
+                                    </div>
+                                    <div class="skills_header" data-target="#backend">
+                                        <i class="fa-solid fa-server skills_icon"></i>
+                                        <div>
+                                            <h1 class="skills_title">Backend Developer</h1>
+                                            <span class="skills_subtitle">More than 1 year</span>
+                                        </div>
+                                        <i class="fa-solid fa-angle-down skills_arrow"></i>
+                                    </div>
+                                    <div class="skills_header" data-target="#mobileapp">
+                                        <i class="fa-solid fa-mobile skills_icon"></i>
+                                        <div>
+                                            <h1 class="skills_title">Mobile Applications</h1>
+                                            <span class="skills_subtitle">More than 1 year</span>
+                                        </div>
+                                        <i class="fa-solid fa-angle-down skills_arrow"></i>
+                                    </div>
+                                    <div class="skills_header" data-target="#design">
+                                        <i class="fa-sharp fa-solid fa-crop skills_icon"></i>
+                                        <div>
+                                            <h1 class="skills_title">UI / UX design</h1>
+                                            <span class="skills_subtitle">More than 1 year</span>
+                                        </div>
+                                        <i class="fa-solid fa-angle-down skills_arrow"></i>
+                                    </div>
+                                </div>
+                                <div class="skills_content">
+                                    <div class="skills_group skills_active" data-content id="frontend">
+                                        <div class="skills_list grid">
+                                            <div class="skills_data">
+                                                <div class="skills_titles">
+                                                    <h3 class="skills_name">HTML</h3>
+                                                    <span class="skills_number">90%</span>
+                                                </div>
+                                                <div class="skills_bar">
+                                                    <span class="skills_percentage" style="width: 90%;"></span>
+                                                </div>
+                                            </div>
+                                            <div class="skills_data">
+                                                <div class="skills_titles">
+                                                    <h3 class="skills_name">CSS</h3>
+                                                    <span class="skills_number">80%</span>
+                                                </div>
+                                                <div class="skills_bar">
+                                                    <span class="skills_percentage" style="width: 80%;"></span>
+                                                </div>
+                                            </div>
+                                            <div class="skills_data">
+                                                <div class="skills_titles">
+                                                    <h3 class="skills_name">JavaScript</h3>
+                                                    <span class="skills_number">60%</span>
+                                                </div>
+                                                <div class="skills_bar">
+                                                    <span class="skills_percentage" style="width: 60%;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skills_group" data-content id="backend">
+                                        <div class="skills_list grid">
+                                            <div class="skills_data">
+                                                <div class="skills_titles">
+                                                    <h3 class="skills_name">Django</h3>
+                                                    <span class="skills_number">90%</span>
+                                                </div>
+                                                <div class="skills_bar">
+                                                    <span class="skills_percentage" style="width: 90%;"></span>
+                                                </div>
+                                            </div>
+                                            <div class="skills_data">
+                                                <div class="skills_titles">
+                                                    <h3 class="skills_name">MySQL</h3>
+                                                    <span class="skills_number">70%</span>
+                                                </div>
+                                                <div class="skills_bar">
+                                                    <span class="skills_percentage" style="width: 70%;"></span>
+                                                </div>
+                                            </div>
+                                            <div class="skills_data">
+                                                <div class="skills_titles">
+                                                    <h3 class="skills_name">Firebase</h3>
+                                                    <span class="skills_number">50%</span>
+                                                </div>
+                                                <div class="skills_bar">
+                                                    <span class="skills_percentage" style="width: 50%;"></span>
+                                                </div>
+                                            </div>
+                                            <div class="skills_data">
+                                                <div class="skills_titles">
+                                                    <h3 class="skills_name">PHP</h3>
+                                                    <span class="skills_number">40%</span>
+                                                </div>
+                                                <div class="skills_bar">
+                                                    <span class="skills_percentage" style="width: 40%;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="skills_group" data-content id="mobileapp">
+                                        <div class="skills_list grid">
+                                            <div class="skills_data">
+                                                <div class="skills_titles">
+                                                    <h3 class="skills_name">KivyMD</h3>
+                                                    <span class="skills_number">80%</span>
+                                                </div>
+                                                <div class="skills_bar">
+                                                    <span class="skills_percentage" style="width: 70%;"></span>
+                                                </div>
+                                            </div>
+                                            <div class="skills_data">
+                                                <div class="skills_titles">
+                                                    <h3 class="skills_name">Java</h3>
+                                                    <span class="skills_number">50%</span>
+                                                </div>
+                                                <div class="skills_bar">
+                                                    <span class="skills_percentage" style="width: 50%;"></span>
+                                                </div>
+                                            </div>
+                                            <div class="skills_data">
+                                                <div class="skills_titles">
+                                                    <h3 class="skills_name">Kotlin</h3>
+                                                    <span class="skills_number">30%</span>
+                                                </div>
+                                                <div class="skills_bar">
+                                                    <span class="skills_percentage" style="width: 30%;"></span>
+                                                </div>
+                                            </div>
+                                            <div class="skills_data">
+                                                <div class="skills_titles">
+                                                    <h3 class="skills_name">Flatter</h3>
+                                                    <span class="skills_number">20%</span>
+                                                </div>
+                                                <div class="skills_bar">
+                                                    <span class="skills_percentage" style="width: 30%;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skills_group" data-content id="design">
+                                        <div class="skills_list grid">
+                                            <div class="skills_data">
+                                                <div class="skills_titles">
+                                                    <h3 class="skills_name">Photoshop</h3>
+                                                    <span class="skills_number">70%</span>
+                                                </div>
+                                                <div class="skills_bar">
+                                                    <span class="skills_percentage" style="width: 70%;"></span>
+                                                </div>
+                                            </div>
+                                            <div class="skills_data">
+                                                <div class="skills_titles">
+                                                    <h3 class="skills_name">Figmal</h3>
+                                                    <span class="skills_number">50%</span>
+                                                </div>
+                                                <div class="skills_bar">
+                                                    <span class="skills_percentage" style="width: 50%;"></span>
+                                                </div>
+                                            </div>
+                                            <div class="skills_data">
+                                                <div class="skills_titles">
+                                                    <h3 class="skills_name">Sketch</h3>
+                                                    <span class="skills_number">30%</span>
+                                                </div>
+                                                <div class="skills_bar">
+                                                    <span class="skills_percentage" style="width: 30%;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<a href="#contact" class="button cntc-btn "> Contact Me</a>-->
+                </div>
+            </div>
+        </section>
+        <!--------------------projects---------------------->
+        <div class="work-gen-container">
+            <section class="work section" id="work">
+                <h2 data-heading="My Projects" class="section_title">Projects</h2>
+                <div class="work_filters">
+                    <span class="work_item active-work" data-filter="all">All</span>
+                    <span class="work_item" data-filter=".web">Web</span>
+                    <span class="work_item" data-filter=".app">App</span>
+                    <span class="work_item" data-filter=".design">Design</span>
+                </div>
+                <div id="work_container" class="work_container container grid">
+                    <div class="work_card mix web">
+                        <img src="images/MbsaVsCH.png" alt="" class="work_img">
+                        <h3 class="work_title">Mombasa Vosh Church</h3>
+                        <span onclick="openMvcworkdata()" class="work_button">
+                            See details
+                        </span>
+                        <div id="Mvcworkpopup-card" class="workpopup-card">
+                            <div class="seedt-btn" onclick="closeMvcworkdata()">&times;</div>
+                            <div class="work-card-desc">
+                                <div class="work-img-tec">
+                                    <img src="images/MbsaVsCH.png" alt="Website image">
+                                    <div class="technologies">
+                                        <h4>Technologies used</h4>
+                                        <ul class="work-technologies grid">
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">HTML</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">CSS</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">JavaScript</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Django</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="work-info">
+                                    <p>This website is a church website. It was designed for Mombasa Vosh Church.
+                                       IT is designed to help the church members get information with 
+                                       ease anywhere and anytime and also to render information to a number of individuals
+                                       at ago without strains.Link to Github is given bellow but rember the site is under private 
+                                       developement so you might not be able to access it's source code
+                                    </p>
+                                    <h4>Project Status: <span>Not Yet Completed</span></h4>
+                                    <h4>Access Link: <a href="https://github.com/gideon-kirui">Github account</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work_card mix app">
+                        <img src="images/Shpmang.png" alt="" class="work_img">
+                        <h3 class="work_title">Shop Management app</h3>
+                        <span onclick="openSmaworkdata()" class="work_button">
+                            See details
+                        </span>
+                        <div id="Smaworkpopup-card" class="workpopup-card">
+                            <div class="seedt-btn" onclick="closeSmaworkdata()">&times;</div>
+                            <div class="work-card-desc">
+                                <div class="work-img-tec">
+                                    <img src="images/Shpmang.png" alt="Website image">
+                                    <div class="technologies">
+                                        <h4>Technologies used</h4>
+                                        <ul class="work-technologies grid">
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Pyhton</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">KivyMD</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Kivy</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Github Workflows</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="work-info">
+                                    <p>This is a mobile application designed in KivyMD python framework. It is designed to 
+                                        help small business mangers manage there stock effectively. this aplication should be able
+                                        to dectect decrease in stock(according to the data fed) and the alert the manger, it should 
+                                        as well calculate the profit gained from sales. The app is still under developement and anyone 
+                                        I welcome any idea. link to source code is given bellow. 
+                                    </p>
+                                    <h4>Project Status: <span>Not Yet Completed</span></h4>
+                                    <h4>Access Link: <a href="https://github.com/gideon-kirui">Github Code</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work_card mix web">
+                        <img src="images/socialmd.png" alt="" class="work_img">
+                        <h3 class="work_title">Social Media Website</h3>
+                        <span onclick="openSmwworkdata()" class="work_button">
+                            See details
+                        </span>
+                        <div id="Smwworkpopup-card" class="workpopup-card">
+                            <div class="seedt-btn" onclick="closeSmwworkdata()">&times;</div>
+                            <div class="work-card-desc">
+                                <div class="work-img-tec">
+                                    <img src="images/socialmd.png" alt="Website image">
+                                    <div class="technologies">
+                                        <h4>Technologies used</h4>
+                                        <ul class="work-technologies grid">
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">HTML</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">CSS</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">JavaScriptp>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Django</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="work-info">
+                                    <p>This website I developed as part of my traing and learning fullstack webdevelopement, this is one of the early website I
+                                        developed as full website with both frontend and backend. however I did not manage to develope it to completion but explored 
+                                        all the basics and from it I got a good understanding of django framework.I'm still working on bringing the site to completion
+                                        and deploy it on one of the free deployment sites to test it's efficiency. any advancement idea is welcomed. Check on the source 
+                                        code through the github link bellow. 
+                                    </p>
+                                    <h4>Project Status: <span>Not Yet Completed</span></h4>
+                                    <h4>Access Link: <a href="#">Github Code</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work_card mix design">
+                        <img src="images/TheGsLogo.png" alt="" class="work_img">
+                        <h3 class="work_title">Logo Design</h3>
+                        <span onclick="openLdworkdata()" class="work_button">
+                            See details
+                        </span>
+                        <div id="Ldworkpopup-card" class="workpopup-card">
+                            <div class="seedt-btn" onclick="closeLdworkdata()">&times;</div>
+                            <div class="work-card-desc">
+                                <div class="work-img-tec">
+                                    <img src="images/TheGsLogo.png" alt="Website image">
+                                    <div class="technologies">
+                                        <h4>Technologies used</h4>
+                                        <ul class="work-technologies grid">
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Photoshop</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Figmal</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Cyberlink</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Oracle</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="work-info">
+                                    <p>Though my passion is on programming, when I fill like bugs are overwhelming I always take a break 
+                                        to refresh my mind but since computer has been a "best freind to me", I will always find some things 
+                                        to do and this would be designs. I have designed quite a number of logos most of which are just for Fun
+                                        get my google drive link bellow to have a look at them. 
+                                    </p>
+                                    <h4>Project Status: <span>Completed A number</span></h4>
+                                    <h4>Access Link: <a href="https://drive.google.com/drive/folders/19-Qzcy4cPWlOJNt_euvAYgPrd0ISDWB1?usp=share_link">Google Drive</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work_card mix app">
+                        <img src="images/Covtrapp.png" alt="" class="work_img">
+                        <h3 class="work_title">Unit convertor App</h3>
+                        <span onclick="openUcaworkdata()" class="work_button">
+                            See details
+                        </span>
+                        <div id="Ucaworkpopup-card" class="workpopup-card">
+                            <div class="seedt-btn" onclick="closeUcaworkdata()">&times;</div>
+                            <div class="work-card-desc">
+                                <div class="work-img-tec">
+                                    <img src="images/Covtrapp.png" alt="Website image">
+                                    <div class="technologies">
+                                        <h4>Technologies used</h4>
+                                        <ul class="work-technologies grid">
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Kivy</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">KivyMD</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Github Workflows</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Python</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="work-info">
+                                    <p>This App I First developed after I was instructed by my lecturer to do so whoever after the
+                                        assesment and I realized it was supper good. I went ahead to work on it abit further, I'm 
+                                        still working on it to ensure that it is perfectly or maybe 90% fit for production. The link 
+                                        will enable you to download and install the app. kindly remember to give your opinion.
+                                    </p>
+                                    <h4>Project Status: <span>Yet to be complete</span></h4>
+                                    <h4>Access Link: <a href="https://docs.google.com/uc?export=download&id=1CRKB_8wkxuKo8SR6KyQ09y_ISAc_kuL7">Google Drive</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work_card mix web">
+                        <img src="images/mywebpage.png" alt="" class="work_img">
+                        <h3 class="work_title">My portfolio</h3>
+                        <span onclick="openMpworkdata()" class="work_button">
+                            See details
+                        </span>
+                        <div id="Mpworkpopup-card" class="workpopup-card">
+                            <div class="seedt-btn" onclick="closeMpworkdata()">&times;</div>
+                            <div class="work-card-desc">
+                                <div class="work-img-tec">
+                                    <img src="images/mywebpage.png" alt="Website image">
+                                    <div class="technologies">
+                                        <h4>Technologies used</h4>
+                                        <ul class="work-technologies grid">
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">HTML</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">CSS</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">JavaScript</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Django</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="work-info">
+                                    <p>This is the same website you are now exploring and hope so far you like the experience, kindly make sure 
+                                        you live a comment bellow so that I can know how I'm Excelling. I'm still working around to ensure I'm 
+                                        up-to-date with the current technologies thus I would emcurage you reach out to me through the chanels 
+                                        provided if you have an idead on what I can do. 
+                                    </p>
+                                    <h4>Project Status: <span>Completed</span></h4>
+                                    <h4>Access Link: <a href="#">TheGs.com</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work_card mix design">
+                        <img src="images/uixdes.jpg" alt="" class="work_img">
+                        <h3 class="work_title">Posters</h3>
+                        <span onclick="openPworkdata()" class="work_button">
+                            See details
+                        </span>
+                        <div id="Pworkpopup-card" class="workpopup-card">
+                            <div class="seedt-btn" onclick="closePworkdata()">&times;</div>
+                            <div class="work-card-desc">
+                                <div class="work-img-tec">
+                                    <img src="images/uixdes.jpg" alt="Website image">
+                                    <div class="technologies">
+                                        <h4>Technologies used</h4>
+                                        <ul class="work-technologies grid">
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Photoshop</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Figmal</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Sketch</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Oracle</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="work-info">
+                                    <p>Just as Logos and cards, this as well is a part-time task done just for fun, well I have a
+                                        great passion for programming but as well I find plessure in designs, I do number of designs
+                                        almost weekly and store them in the cloud. you may be Interested to see what I'm able to do 
+                                        as far as design is concerned. the link si provide bellow.
+                                    </p>
+                                    <h4>Project Status: <span>Worked on a number</span></h4>
+                                    <h4>Access Link: <a href="https://drive.google.com/drive/folders/19-Qzcy4cPWlOJNt_euvAYgPrd0ISDWB1?usp=share_link">Google Drive</a></h4>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="work_card mix web">
+                        <img src="images/Ecomweb.png" alt="" class="work_img">
+                        <h3 class="work_title">E-Commerce Website</h3>
+                        <span onclick="openEcwworkdata()" class="work_button">
+                            See details
+                        </span>
+                        <div id="Ecwworkpopup-card" class="workpopup-card">
+                            <div class="seedt-btn" onclick="closeEcwworkdata()">&times;</div>
+                            <div class="work-card-desc">
+                                <div class="work-img-tec">
+                                    <img src="images/Ecomweb.png" alt="Website image">
+                                    <div class="technologies">
+                                        <h4>Technologies used</h4>
+                                        <ul class="work-technologies grid">
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">HTML</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">CSS</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">JavaScript</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Django</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="work-info">
+                                    <p>This website is still under developement, I am not developing it for anyone but I'm using it 
+                                        to perfect my skills on full functional E-Commerce developement work, this project was an assignment
+                                        project that I submitted for marking, and after realizing that I can advance it for production, I decided
+                                        to advance it and see it work well in production environment.
+                                    </p>
+                                    <h4>Project Status: <span>Not Yet Completed</span></h4>
+                                    <h4>Access Link: <a href="https://github.com/gideon-kirui">Github</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work_card mix design">
+                        <img src="images/designsimg.jpg" alt="" class="work_img">
+                        <h3 class="work_title">Function Cards</h3>
+                        <span onclick="openFcworkdata()" class="work_button">See detail</span>
+                        <div id="Fcworkpopup-card" class="workpopup-card">
+                            <div class="seedt-btn" onclick="closeFcworkdata()">&times;</div>
+                            <div class="work-card-desc">
+                                <div class="work-img-tec">
+                                    <img src="images/designsimg.jpg" alt="Website image">
+                                    <div class="technologies">
+                                        <h4>Technologies used</h4>
+                                        <ul class="work-technologies grid">
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Photoshop</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Figmal</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Cyberlink</p>
+                                            </li>
+                                            <li class="work-tech-data">
+                                                <i class="fa-solid fa-check-circle work-technology-icon"></i>
+                                                <p class="work-tech">Sketch</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="work-info">
+                                    <p>Function Cards are never an exeption from my "free time" task, I have as well
+                                        designed a number of this cards mostly just for fun most of whcich I store in 
+                                        my google drive cloud. the link to the goole drive bellow will help you get to 
+                                        access some of my work in regards to card designs. 
+                                    </p>
+                                    <h4>Project Status: <span>Completed A number</span></h4>
+                                    <h4>Access Link: <a href="https://drive.google.com/drive/folders/19-Qzcy4cPWlOJNt_euvAYgPrd0ISDWB1?usp=share_link">Google Drive</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <section class="services section" id="services">
+            <h2 data-heading="services" class="section_title">What I Can Do</h2>
+            <div class="services_container container grid">
+                <div class="services_content">
+                    <div class="service_brf">
+                        <div>
+                            <i class="fa-solid fa-code services_icon"></i>
+                            <div class="services_title">Web Developement</div>
+                        </div>
+                        <span class="services_button">
+                            see details
+                        </span>
+                    </div>
+                    
+                    <div class="services_modal-content">
+                        <i class="fa-solid fa-times services_modal-close"></i>
+                        <h3 class="services_modal-title bounce">Fullstack Web Developer</h3>
+                        <p class="services_modal-description bounce">
+                            I have more than 2years exprience in website developemnt. I can develope a 
+                            full resposive wibsite of any type with great user interface and experience 
+                            using the technologies that are listed in <span class="close_modl"><a href="#about">My Experience</a></span> Section
+                        </p>
+                        <button class="button bounce">
+                            <a href="mailto:thegs.dev.mail@gmail.com">Send Email</a>
+                        </button>
+                    </div>
+                    
+                </div>
+                <div class="services_content">
+                    <div class="service_brf">
+                        <div>
+                            <i class="fa-sharp fa-solid fa-crop services_icon"></i>
+                            <div class="services_title">UI/UX Design</div>
+                        </div>
+                        <span class="services_button">
+                            see details
+                        </span>
+                    </div>
+                    
+                    <div class="services_modal-content">
+                        <i class="fa-solid fa-times services_modal-close"></i>
+                        <h3 class="services_modal-title bounce">UI/UX Designer</h3>
+                        <p class="services_modal-description bounce ">
+                            With Designs, I have more than three years of experience, before i dived 
+                            to codding, one of the great tasks i used to do with a computer was to design
+                            different cards, logos and posters using a number of tools some of which are 
+                            highlighted in <span class="close_modl"><a href="#about">My Eprience </a></span>Section
+                        </p>
+                        <button class="button bounce">
+                            <a href="mailto:thegs.dev.mail@gmail.com">Send Email</a>
+                        </button>
+                    </div>
+                   
+                </div>
+                <div class="services_content">
+                    <div class="service_brf">
+                        <div>
+                            <i class="fa-solid fa-mobile services_icon"></i>
+                            <div class="services_title">Mobile Applications</div>
+                        </div>
+                        <span class="services_button">
+                            see details
+                        </span>
+                    </div>
+                    
+                    <div class="services_modal-content">
+                        <i class="fa-solid fa-times services_modal-close"></i>
+                        <h3 class="services_modal-title bounce">Mobile Application Developer</h3>
+                        <p class="services_modal-description bounce">
+                            I have more than 1year exprience in Mobile Application developemnt. I develope mobile applications that are user freindly
+                            and in most cases is compatible with almost in all devices. All the applications have developed
+                            using the technologies that are listed in <span class="close_modl"><a href="#about">My Experience</a></span> Section
+                        </p>
+                        <button class="button bounce">
+                            <a href="mailto:thegs.dev.mail@gmail.com">Send Email</a>
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!--------------------Comments---------------------->
+        <section id="comment" class="testimonials section">
+            <h2 data-heading="What clients have to say" class="section_title">Comments</h2>
+            <div class="testimonials_container container grid">
+                <div>
+                    <div class="testimonial_card fade">
+                        <div class="testimonial_quote">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p id="cmntpst" class="testimonial_description">
+                        </p>
+                        <h3 class="testimonial_date"><span id="tstdyd"></span> <span id="tstmd"></span> <span id="tstdt"></span></h3>
+                        <div class="testimonial_profile">
+                            <img src="images/user-2.png" alt="" class="testimonial_profile-img">
+                            <div class="testimonial_profile-data">
+                                <span id="cmntnm" class="testimonial_profile-name"></span>
+                                <p><span id="cmint"></span></p>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
+        <!-----------------------foooter-------------------------->
+        <section class="footer section" id="contact">
+            <div class="footer_bg">
+                <div class="footer_container">
+                    <div class="footer_title-data">
+                        <div class="g-logo-data">
+                            <div class="footer_logo">
+                                <a href="home.html" class="footer_logo-text">TheGs</a>
+                            </div>
+                            <div class="footer_title-details">
+                                <h1 class="footer_title">Gideon</h1>
+                                <span class="footer_subtitle">Web Developer</span>
+                            </div>
+                        </div>
+                        <div>
+                            <ul class="cnt-dt">
+                                <li>Tell: 0742454156</li>
+                                <li>Website: www.thegs.com</li>
+                                <li>P.O.Box 6100 - Embu</li>
+                                <li>Embu-Meru Road, University of Embu</li>
+                                <li>Email: thegs@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--------------------Contact---------------------->
+                    <div class="contact">
+                        <div class="contact_container">
+                            <div class="contact_content">
+                                <h2 class="footer_titles">Leave a comment</h2>
+                                <form action="" class="contact_form">
+                                    <div class="input_container">
+                                        <input id="nameinput" type="text" placeholder="Enter Name" class="input">
+                                    </div>
+                                    <div class="input_container">
+                                        <input type="email" placeholder="Email" class="input">
+                                    </div>
+                                    <div class="input_container">
+                                    <textarea name="" id="comentinput" placeholder="Type Comment" class="input"></textarea>
+                                    </div>
+                                    <button onclick="sendComent()" class="button">
+                                        <a href="#comment">Share Comment</a>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="last-footer">
+                <div class="alr-r">
+                    <ul>
+                        <li>All Rights Reserved</li>
+                        <li>TheGs&copy;2022</li>
+                        <li><a href="#">Terms and Conditions</a> || <a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--------------------------Scrollup-------------------->
+    <!----------------------------lorem
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero qui cumque, laboriosam laborum error officia quisquam itaque aut, iure voluptatibus velit recusandae omnis ex, sit dolor libero dolorum similique dolores.-->
+    <!--------------------------mixedup filter--------------->
+    <script src="js/mixitup.min.js"></script>
+
+    <!-----------------------swipper js------------------->
+    <script src=""></script>
+
+    <!--------------------------main js--------------------->
+    <script src="js/main.js"></script>
+</body>
+</html>
